@@ -1,31 +1,10 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" }
   ],
   "functions": {
     "api/**/*.js": {
       "maxDuration": 10
     }
-  },
-  "env": {
-    "MONGODB_URI": "@mongodb_uri",
-    "ADMIN_TOKEN": "@admin_token"
   }
 }
