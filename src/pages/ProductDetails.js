@@ -126,7 +126,7 @@ function ProductDetails({ cart, addToCart }) {
         </button>
         {showSize && (
           <div className="pb-4">
-            <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=600" alt="Size Chart" className="w-full rounded" />
+            <img src="/SIZE-CHART.png" alt="Size Chart" className="w-full rounded" />
           </div>
         )}
 
